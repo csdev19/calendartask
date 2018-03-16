@@ -9,23 +9,25 @@ from django.views.generic import TemplateView
 # 	return render (request,'tasks/calendar.html')
 
 class HomeView (TemplateView):
-    template_name = "tasks/home.html"
+	template_name = "tasks/home.html"
 
 
 class TaskView (TemplateView):
-    template_name = "tasks/tasks.html"
+	template_name = "tasks/tasks.html"
 
 class CreateTask (TemplateView):
 	template_name = "tasks/create.html"
 
-class DayView (TemplateView):
-    template_name = "tasks/day.html"
+class DayTask (TemplateView):
+	template_name = "tasks/day.html"
 
-    def retDay (self, day):
-    	
-    	return day
+	def retDay (self, day):
+		if day < 30:
+			return day
+
+		else:
+			return 'que mal fallo'
 
 
-
-class MonthView (TemplateView):
-    template_name = "tasks/month.html"
+class MonthTask (TemplateView):
+	template_name = "tasks/month.html"

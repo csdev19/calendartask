@@ -7,15 +7,20 @@
 {% block body %}
 	
 	<h1>Form to add</h1>
+	<h2>At the day {{ day }} and the month {{ month }}  </h2>
+	
+	<form action="create_submit" method="get" accept-charset="utf-8">
+		<label>Name
+			<input type="text" name="" value="">
+		</label>
+		<label>Last Name
+			<input type="text" name="" value="">
+		</label>
+		<label>Email
+			<input type="text" name="" value="">
+		</label>
 
-	<label>Name
-		<input type="text" name="" value="">
-	</label>
-	<label>Last Name
-		<input type="text" name="" value="">
-	</label>
-	<label>Email
-		<input type="text" name="" value="">
-	</label>
+		<button type="submit">Crear</button>
+	</form>
 
 {% endblock body %}

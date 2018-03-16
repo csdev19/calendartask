@@ -21,5 +21,5 @@ urlpatterns = [
     path ('admin/', admin.site.urls),
     path ('', HomeView.as_view()),
     path ('tasks/', include('tasks.urls')),
-    path ('calendar/', include('schedule.urls')),
+    path ('calendar/', include('schedules.urls')),
 ]
